@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Polyglot</title>
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+    <svg style="display:none;">
+        <symbol id="icon__instagram" viewBox="0 0 37 37">
+            <g><path d="M18.5039 9.51831C13.5323 9.51831 9.52225 13.5285 9.52225 18.4999C9.52225 23.4714 13.5323 27.4813 18.5039 27.4813C23.4754 27.4813 27.4854 23.4713 27.4854 18.4999C27.4854 13.5285 23.4753 9.51831 18.5039 9.51831ZM18.5039 24.3391C15.2912 24.3391 12.6646 21.7204 12.6646 18.4999C12.6646 15.2794 15.2833 12.6608 18.5039 12.6608C21.7242 12.6608 24.343 15.2794 24.343 18.4999C24.343 21.7204 21.7166 24.3391 18.5039 24.3391ZM29.9477 9.15101C29.9477 10.3158 29.0096 11.2459 27.8528 11.2459C26.688 11.2459 25.7579 10.3079 25.7579 9.15101C25.7579 7.99411 26.6958 7.05605 27.8528 7.05605C29.0096 7.05605 29.9477 7.99403 29.9477 9.15101ZM35.8962 11.277C35.7635 8.47094 35.1225 5.98508 33.0666 3.93712C31.0186 1.88909 28.5328 1.2481 25.7267 1.10749C22.8343 0.943337 14.1655 0.943337 11.2733 1.10749C8.47481 1.24026 5.98909 1.88132 3.93329 3.92935C1.87741 5.97738 1.24427 8.4631 1.10358 11.2693C0.939431 14.1614 0.939431 22.8304 1.10358 25.7226C1.2365 28.529 1.87741 31.0145 3.93329 33.0626C5.98909 35.1107 8.46712 35.7516 11.2733 35.8923C14.1655 36.0563 22.8343 36.0563 25.7267 35.8923C28.5329 35.7594 31.0187 35.1183 33.0666 33.0626C35.1146 31.0145 35.7556 28.5289 35.8962 25.7226C36.0605 22.8305 36.0605 14.1693 35.8962 11.277ZM32.1598 28.826C31.5501 30.3579 30.3697 31.5384 28.8298 32.1559C26.5239 33.0706 21.0521 32.8594 18.5038 32.8594C15.9554 32.8594 10.4758 33.0627 8.17774 32.1559C6.64562 31.5461 5.46518 30.366 4.84773 28.826C3.93329 26.52 4.14444 21.0482 4.14444 18.4999C4.14444 15.9516 3.94114 10.4721 4.84781 8.17387C5.45764 6.64175 6.63785 5.46139 8.17782 4.84395C10.4838 3.92935 15.9555 4.14042 18.5039 4.14042C21.0521 4.14042 26.5317 3.9372 28.8299 4.84395C30.362 5.45347 31.5423 6.63398 32.1598 8.17387C33.0744 10.4797 32.8634 15.9516 32.8634 18.4999C32.8634 21.0482 33.0744 26.5278 32.1598 28.826Z"/></g>
+        </symbol>
+
+    </svg>
+
+    <div id="openModal" class="modal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+
+                <div class="modal__thx">
+                    <div><a href="#close" title="Close" class="close">×</a></div>
+                    <h3 class="modal-title">Спасибо за заявку&nbsp;&nbsp;<img src="/images/modal_smile.jpg" alt=""><br>
+                        Ожидайте нашего ответа в ближайшее время!</h3>
+                </div>
+                <div class="modal__start">
+                    <h3 class="modal-title">Запишите себя или своего ребенка на первое пробное занятие!</h3>
+                    <div><a href="#close" title="Close" class="close">×</a></div>
+                </div>
+            </div>
+            <div class="modal-body">    
+              <form action="#" method="post">
+
+                <!-- Hidden Required Fields -->
+                <input type="hidden" name="project_name" value="Polyglot">
+                <input type="hidden" name="admin_email" value="thepolyglot.online@gmail.com">
+                <input type="hidden" name="form_subject" value="Заявка с сайта">
+                <!-- END Hidden Required Fields -->
+
+                <p>
+                    <label for="text">Ваше ФИО:</label><br>
+                    <input type="text" name="name" id="user_name" required placeholder="Введите Ф.И.О.">
+                </p>
+                <p>
+                    <label for="email">E-mail:</label><br>
+                    <input type="email" name="email" id="user_email" required placeholder="lovelanguages@gmail.com">
+                </p>
+                <p>
+                    <label for="tel">Номер телефона:</label><br>
+                    <input id="modal_tel" type="tel" name="phone" id="user_phone" required placeholder="+ 38 (0**) *** - ** - **">
+                </p>
+                <p>
+                    <label for="languages">Язык, который хотите изучать:</label><br>
+                    <!-- <div class="select"> -->
+                        <select name="languages" class="select">
+                            <option disabled>Выберите язык</option>
+                            <option valuse="1">Английский</option>
+                            <option value="2">Испанский</option>
+                            <option value="3">Арабский</option>
+                            <option value="4">Немецкий</option>
+                            <option value="5">Украинский</option>
+                        </select>
+                    <!-- </div> -->
+                </p>
+                <button class="intro__button">Отправить</button>
+              </form>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <header>
+        <div class="container">
+            <div class="header">
+                <div class="header__left">
+                    <a class="header__logo" href="index.html"> <img src="/images/logo.png" alt="Polyglot"></a>
+                    <nav class="header__nav">
+                        <ul>
+                            <li><a class="header__link" href="#">Главная</a></li>
+                            <li><a class="header__link" href="#">О школе</a></li>
+                            <li><a class="header__link" href="#">Программы</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="header__right">
+                    <p class="first__phone"><a href="tel:+380982254926">+38 098 225 49 26</a></p>
+                    <p class="second__phone"><a href="tel:+380963997755">+38 096 399 77 55</a></p>
+                    <a href="https://instagram.com/thepolyglot.online?utm_medium=copy_link"><svg class="instagram"><use xlink:href="#icon__instagram"></use></svg></a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="intro">
+        <div class="container">
+            <div class="intro__inner">
+                <h1 class="intro__title">Онлайн-школа изучения английского и немецкого языков!</h1>
+                <p class="intro__text">Учите языки из дома, работы или даже во время отпуска с любого удобного вам устройства и с любой точки мира &#127757;</p>
+                <a style="text-decoration: none;" href="#openModal"><button class="intro__button">Пробный урок</button></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="whyUs">
+        <div class="container">
+            <div class="whyUs__inner">
+                <h3 class="title__blocks">Почему мы?</h3>
+                <div class="whyUs__advantages">
+                    <div class="advantage__block">
+                        <div class="advantage__icon">
+                            <img src="/images/advFirst.jpg" alt="">
+                        </div>
+                        <div class="advantageBlock__content">
+                            <h4 class="content__title">Учи языки в пижаме!</h4>
+                            <p class="content__text">В нашу турбулентную эпоху постоянных локдаунов учёба-онлайн стала настоящим открытием для многих людей, которые стремятся к разумной оптимизации времени и могут ощутить на себе, каково это - получать полезные знания в удобной пижаме не вылезая из кровати.</p>
+                        </div>
+                    </div>
+                    <div class="advantage__block">
+                        <div class="advantage__icon">
+                            <img src="/images/advSecond.jpg" alt="">
+                        </div>
+                        <div class="advantageBlock__content">
+                            <h4 class="content__title">Преподаватели на одной волне!</h4>
+                            <p class="content__text">У нас молодые сертифицированные преподаватели, которые сами прошли путь от нуля до свободного владения тремя иностранными языками, поэтому не понаслышке знают, как стать полиглотом. </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="programms">
+        <div class="container">
+            <div class="programms__inner">
+                <h3 class="title__blocks">Программы обучения</h3>
+                <p class="title__note">* занятия проходят на платформе Skype</p>
+                <div class="programms__greed">
+                    <div class="programms__block">
+                        <div class="programms__title">
+                            <h4 class="content__title">Индивидуально</h4>
+                            <img src="/images/programms/individual.jpg" alt="">
+                        </div>
+                        <p class="content__text">Занятия проходят один на один с преподавателем. Данный формат является одним из самых удобных.</p>
+                        <p class="content__text">Стоимость 1 занятия = 250 грн<br>
+                        Пакет из 10 занятий = 2500 грн<br>
+                        Пакет из 20 занятий = 4800 грн</p>
+                        <button class="content__link">Записаться <span>&#10140;</span></button>
+                    </div>
+                    <div class="programms__block">
+                        <div class="programms__title">
+                            <h4 class="content__title">Групповые занятия</h4>
+                            <img src="/images/programms/group.jpg" alt="">
+                        </div>
+                        <p class="content__text">Занятия проходят три раза в неделю в группах из 6 человек, которые формируются по возрасту студентов нашей школы и уровню знания языка.</p>
+                        <p class="content__text"> 1,5 месяца обучения = 21 занятие = 3800 грн<br>
+                        Пакет из 10 занятий = 1900 грн<br>
+                        <button class="content__link">Записаться <span>&#10140;</span></button>
+                    </div>
+                    <div class="programms__block">
+                        <div class="programms__title">
+                            <h4 class="content__title">Coffee date</h4>
+                            <img src="/images/programms/coffee.jpg" alt="">
+                        </div>
+                        <p class="content__text">Вы можете попробовать формат живого общения с преподавателем. Наслаждайтесь чашкой ароматного кофе, изучайте язык и задавайте любые вопросы своему учителю.</p>
+                        <p class="content__text">1 занятие = 350 грн<br>
+                        <button class="content__link">Записаться <span>&#10140;</span></button>
+                    </div>
+                    <div class="programms__block">
+                        <div class="programms__title">
+                            <h4 class="content__title">Разговорный клуб</h4>
+                            <img src="/images/programms/speaking.jpg" alt="">
+                        </div>
+                        <p class="content__text">Занятия проходят раз в неделю и направлены на преодоление языкового барьера, практику комуникационных навычек и ораторского искусства. Группа состоит из 8 человек.</p>
+                        <p class="content__text">1 занятие = 150 грн<br>
+                        Пакет из 10 занятий = 1500 грн<br>
+                        Пакет из 20 занятий = 3000 грн</p>
+                        <button class="content__link">Записаться<span>&#10140;</span></button>
+                    </div>
+                </div>
+                <a style="text-decoration: none;" href="#openModal"><button class="programms__btn">Записаться на пробный урок</button></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="aboutUs">
+        <div class="container">
+            <h3 class="title__blocks">Про нас</h3>
+        </div>
+        <div class="about__slider">
+            <div class="slider__item">
+                <div class="container">
+                <div class="slider__dots">
+                    <img class="top_dot" src="images/aboutUs/top_dot.jpg" alt="">
+                    <img class="bottom_dot" src="images/aboutUs/bottom_dot.png" alt="">
+                </div>
+                <div class="slider__top">
+                    <p class="slider__text">Антон Павлович Чехов однажды сказал: «Сколько языков ты знаешь – столько раз ты человек»  &#129488;    Что ж, давайте знакомиться! Меня зовут Анастасия, и я целых 5 раз человек  &#128540; поскольку владею английским, арабским, польским, украинским и русским. Я твёрдо убеждена, что лучшая инвестиция, которую может сделать каждый, - это инвестиция в себя и своё будущее, что и является философией The Polyglot Online School &#128591; <br>
+                    Я успешно сдала множество международных тестов на знание английского языка (IELTS, PTE), поэтому в нашей онлайн-школе преподаю именно English и смогу заставить говорить на английском любого  &#128520; Однако также я с радостью стану Вашим учителем арабского или украинского языка. В любом случае, если Вы за бесконечное саморазвитие и красоту своей речи, тогда Вам, несомненно, в The Polyglot Online School &#129303;</p>
+                    <div class="slider__photo">
+                        <img src="/images/aboutUs/Anastasia.jpg" alt="">
+                    </div>
+                </div>
+                <div class="slider__name">
+                    <span>Анастасия Бардашевская</span>
+                    <p>СО-основательница школы</p>
+                </div>
+                </div>
+            </div>
+            <div class="slider__item">
+                <div class="container">
+                <div class="slider__dots">
+                    <img class="top_dot" src="images/aboutUs/top_dot.jpg" alt="">
+                    <img class="bottom_dot" src="images/aboutUs/bottom_dot.png" alt="">
+                </div>
+                <div class="slider__top">
+                    <p class="slider__text">Ни для кого не секрет, что в наше время знание иностранных языков ценится всегда и везде, а владеть одним лишь английским - уже недостаточно &#129335; Так что приготовьтесь учить не менее востребованный немецкий язык с Frau Somkina &#128527;  После 10 лет его изучения я готова доказать Вам, что немецкий может звучать невероятно благозвучно, мягко и красиво &#127926; А поскольку за плечами у меня есть опыт учебы в Германии и Австрии, я с лёгкостью избавлю Вас от страха поступления за границу и смогу направить на путь истинный 	&#128524;<br>
+                    Мой опыт преподавания подсказывает, что заниматься по книге совершенно неинтересно, поэтому я всегда готовлюсь к уроку творчески, объясняю сложный материал простыми словами и раз в неделю провожу со своими учениками Coffee Date, где за чашкой кофе с кусочком тортика lernen wir Grammatik und Deutsch sprechen &#129392;</p>
+                    <div class="slider__photo">
+                        <img src="/images/aboutUs/Bojena.jpg" alt="">
+                    </div>
+                </div>
+                <div class="slider__name">
+                    <span>Божена Сёмкина</span>
+                    <p>СО-основательница школы</p>
+                </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+    <div class="banner">
+        <div class="container">
+            <div class="banner__inner">
+                <div class="banner__left">
+                    <h3 class="banner__title">Запишите себя или своего ребенка на первое пробное занятие! </h3>
+                    <ul class="banner__text">
+                        <li>Познакомимся</li>
+                        <li>Определим Ваш уровень и формат изучения языка</li>
+                        <li>Покажем, как проходит занятие</li>
+                    </ul>
+                </div>
+                <div>
+                    <a style="text-decoration: none;" href="#openModal"><button class="intro__button">Пробный урок</button></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="start">
+        <div class="container">
+            <div class="start__inner">
+                <h3 class="title__blocks">С чего начать?</h3>
+                <div class="start__content">
+                    <div class="start__block">
+                        <img src="/images/start/1.jpg" alt="">
+                        <p>Выбираете программу</p>
+                    </div>
+                    <div class="start__line"><img src="/images/start/line.jpg" alt=""></div>
+                    <div class="start__block">
+                        <img src="/images/start/2.jpg" alt="">
+                        <p>Приходите на пробный урок</p>
+                    </div>
+                    <div class="start__line"><img src="/images/start/line.jpg" alt=""></div>
+                    <div class="start__block">
+                        <img src="/images/start/3.jpg" alt="">
+                        <p>Остаетесь с нами :)</p>
+                    </div>
+                </div>
+                <a style="text-decoration: none;" href="#openModal"><button class="programms__btn">Записаться на консультацию</button></a>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__inner">
+                <div class="footer__left">
+                    <a href="index.html"><img class="footer__logo" src="/images/logo.png" alt=""></a>
+                    <nav class="header__nav">
+                        <ul>
+                            <li><a class="header__link" href="#">Главная</a></li>
+                            <li><a class="header__link" href="#">О школе</a></li>
+                            <li><a class="header__link" href="#">Программы</a></li>
+                        </ul>
+                    </nav>
+                    <span>© 2021 The Polyglot Online School</span>
+                </div>
+                <div class="footer__right">
+                    <ul class="footer__contact">
+                        <li><a href="https://instagram.com/thepolyglot.online?utm_medium=copy_link">thepolyglot.online&nbsp;<img src="/images/footer/insta.svg" alt=""></a></li>
+                        <li><span>thepolyglot.online@gmail.com</span>&nbsp;<img src="/images/footer/mail.svg" alt=""></li>
+                        <li><a href="tel:+380982254926">+38 098 225 49 26</a>&nbsp;&nbsp;&nbsp;<a href="tel:+380963997755">+38 096 399 77 55</a>&nbsp;<img src="/images/footer/phone.svg" alt=""></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="js/main.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery.maskedinput@1.4.1/src/jquery.maskedinput.min.js" type="text/javascript"></script>
+</body>
+</html>
